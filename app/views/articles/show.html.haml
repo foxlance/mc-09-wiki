@@ -1,0 +1,8 @@
+%h1= @article.title
+%p= @article.content
+
+%br
+.btn-group
+  = link_to "Article List", root_path, class: 'btn btn-default'
+  = link_to "Edit", edit_article_path, class: 'btn btn-default'
+  = link_to "Destroy", article_path, method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-default'
