@@ -2,7 +2,7 @@
   - @articles.each do |article|
     %h2= link_to article.title, article
     %p= truncate(article.content, length: 200)
-    %small= "Published at #{article.created_at.strftime('%D')} by #{current_user.email}"
+    %small= "Published at #{article.created_at.strftime('%D')}"
 - else
   %p 
     No articles under this category.
