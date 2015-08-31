@@ -10,7 +10,7 @@
   
   %nav.navbar.navbar-default
     .container
-      .navbar-brand Wiki
+      .navbar-brand= link_to "Wiki", root_path
       %ul.nav.navbar-nav.navbar-right
         - if user_signed_in?
           %li= link_to "Create Article", new_article_path
