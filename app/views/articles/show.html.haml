@@ -1,5 +1,9 @@
-%h1= @article.title
-%p= @article.content
+%article
+  %h1= @article.title
+  %small= "Last edited: #{time_ago_in_words @article.created_at} ago"
+  %br
+  %br
+  %p= @article.content
 
 %br
 .btn-group

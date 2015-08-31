@@ -5,6 +5,7 @@
       %h1 Create new Article
 
     .panel-body
+      = f.collection_select :category_id, Category.all, :id, :name, {prompt: "Choose a category"}, class: 'form-control', label: "Categories"
       = f.input :title
       = f.input :content
 
