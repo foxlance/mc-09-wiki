@@ -22,4 +22,10 @@
   .container
     = render 'layouts/notice'
 
-    = yield
+    .row
+      .col-md-8
+        = yield
+      .col-md-4
+        %ul.list-group
+          - Category.all.each do |category|
+            %li.list-group-item= link_to category.name, articles_path(category: category.name)
